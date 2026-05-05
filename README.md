@@ -5,7 +5,7 @@ Cloud Run service that receives Fleet osquery log messages from GCP PubSub push 
 ## Environment variables
 
 | Variable | Description |
-|---|---|
+| --- | --- |
 | `BQ_PROJECT_ID` | GCP project hosting the BigQuery dataset |
 | `BQ_DATASET_ID` | BigQuery dataset ID (e.g. `fleet_logs`) |
 | `RESULT_SUBSCRIPTION` | PubSub subscription ID for osquery result logs |
@@ -18,6 +18,15 @@ Cloud Run service that receives Fleet osquery log messages from GCP PubSub push 
 - `result_logs` — One row per osquery result row. Snapshot arrays are exploded; diffResults are split into `added`/`removed` rows.
 - `status_logs` — Osquery agent status/error logs.
 - `audit_logs` — Fleet user/automation audit activity.
+
+## Image
+
+Pre-built images are published to GHCR on every tagged release:
+
+```
+ghcr.io/campustech/fleet-pubsub-bq:latest
+ghcr.io/campustech/fleet-pubsub-bq:v1.0.0
+```
 
 ## Building
 
