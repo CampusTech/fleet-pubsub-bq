@@ -30,3 +30,7 @@ docker build -t fleet-pubsub-bq .
 ```sh
 go test ./...
 ```
+
+## Authorship
+
+This code was written by Claude (Anthropic) and reviewed by a human before submission.
