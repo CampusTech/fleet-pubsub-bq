@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/campus-it/fleet-pubsub-bq/internal/ingest"
+	"github.com/CampusTech/fleet-pubsub-bq/internal/ingest"
 	"github.com/sirupsen/logrus"
 )
 

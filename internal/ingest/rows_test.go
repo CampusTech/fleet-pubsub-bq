@@ -159,10 +159,10 @@ func TestBuildAuditRow(t *testing.T) {
 		"type": "created_user",
 		"actor_id": 7,
 		"actor_full_name": "Robbie T",
-		"actor_email": "robbie@campus.edu",
+		"actor_email": "admin@example.com",
 		"actor_api_only": false,
 		"fleet_initiated": false,
-		"details": {"target_email": "new@campus.edu"}
+		"details": {"target_email": "newuser@example.com"}
 	}`)
 
 	row, err := BuildAuditRow(payload, ts)
@@ -172,8 +172,8 @@ func TestBuildAuditRow(t *testing.T) {
 	if row.Type != "created_user" {
 		t.Errorf("want type=created_user, got %q", row.Type)
 	}
-	if row.ActorEmail != "robbie@campus.edu" {
-		t.Errorf("want actor_email=robbie@campus.edu, got %q", row.ActorEmail)
+	if row.ActorEmail != "admin@example.com" {
+		t.Errorf("want actor_email=admin@example.com, got %q", row.ActorEmail)
 	}
 	if row.Details == "" {
 		t.Error("want details non-empty")

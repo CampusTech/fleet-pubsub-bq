@@ -1,4 +1,4 @@
-module github.com/campus-it/fleet-pubsub-bq
+module github.com/CampusTech/fleet-pubsub-bq
 
 go 1.26.2
 
